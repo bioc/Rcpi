@@ -1,0 +1,40 @@
+\name{extractDrugPubChem}
+\alias{extractDrugPubChem}
+\title{Calculate the PubChem Molecular Fingerprints (in Compact Format)}
+\usage{
+extractDrugPubChem(molecules, silent = TRUE)
+}
+\arguments{
+  \item{molecules}{Parsed molucule object.}
+
+  \item{silent}{Logical. Whether the calculating process
+  should be shown or not, default is \code{TRUE}.}
+}
+\value{
+A list, each component represents one of the molecules,
+each element in the component represents the index of which
+element in the fingerprint is 1. Each component's name is
+the length of the fingerprints.
+}
+\description{
+Calculate the PubChem Molecular Fingerprints (in Compact
+Format)
+}
+\details{
+Calculate the 881 bit fingerprints defined by PubChem.
+}
+\examples{
+\donttest{
+smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
+mol = readMolFromSmi(smi, type = 'mol')
+fp  = extractDrugPubChem(mol)
+head(fp)}
+}
+\author{
+Nan Xiao <\url{http://www.road2stat.com}>
+}
+\seealso{
+\link{extractDrugPubChemComplete}
+}
+\keyword{extractDrugPubChem}
+
