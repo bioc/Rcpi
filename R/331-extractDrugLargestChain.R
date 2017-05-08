@@ -18,7 +18,7 @@
 #'
 #' @aliases extractDrugLargestChain
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugLargestChain
 #'
@@ -33,9 +33,10 @@
 
 extractDrugLargestChain = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.LargestChainDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.LargestChainDescriptor',
+        verbose = !silent)
 
     return(x)
 

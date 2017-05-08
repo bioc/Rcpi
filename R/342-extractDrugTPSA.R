@@ -19,7 +19,7 @@
 #'
 #' @aliases extractDrugTPSA
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugTPSA
 #'
@@ -41,9 +41,10 @@
 
 extractDrugTPSA = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.TPSADescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.TPSADescriptor',
+        verbose = !silent)
 
     return(x)
 

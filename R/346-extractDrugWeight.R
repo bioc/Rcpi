@@ -16,7 +16,7 @@
 #'
 #' @aliases extractDrugWeight
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugWeight
 #'
@@ -31,9 +31,10 @@
 
 extractDrugWeight = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.WeightDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.WeightDescriptor',
+        verbose = !silent)
 
     return(x)
 

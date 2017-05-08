@@ -17,7 +17,7 @@
 #'
 #' @aliases extractDrugIPMolecularLearning
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugIPMolecularLearning
 #'
@@ -32,9 +32,10 @@
 
 extractDrugIPMolecularLearning = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.IPMolecularLearningDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.IPMolecularLearningDescriptor',
+        verbose = !silent)
 
     return(x)
 

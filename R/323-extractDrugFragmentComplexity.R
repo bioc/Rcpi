@@ -20,7 +20,7 @@
 #'
 #' @aliases extractDrugFragmentComplexity
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugFragmentComplexity
 #'
@@ -43,9 +43,10 @@
 
 extractDrugFragmentComplexity = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.FragmentComplexityDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.FragmentComplexityDescriptor',
+        verbose = !silent)
 
     return(x)
 

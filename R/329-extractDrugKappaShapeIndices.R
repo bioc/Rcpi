@@ -31,7 +31,7 @@
 #'
 #' @aliases extractDrugKappaShapeIndices
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugKappaShapeIndices
 #'
@@ -46,9 +46,10 @@
 
 extractDrugKappaShapeIndices = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.KappaShapeIndicesDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.KappaShapeIndicesDescriptor',
+        verbose = !silent)
 
     return(x)
 

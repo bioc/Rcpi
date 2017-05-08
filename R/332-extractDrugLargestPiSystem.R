@@ -16,7 +16,7 @@
 #'
 #' @aliases extractDrugLargestPiSystem
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugLargestPiSystem
 #'
@@ -31,9 +31,10 @@
 
 extractDrugLargestPiSystem = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.LargestPiSystemDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.LargestPiSystemDescriptor',
+        verbose = !silent)
 
     return(x)
 

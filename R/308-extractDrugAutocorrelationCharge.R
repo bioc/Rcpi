@@ -18,7 +18,7 @@
 #'
 #' @aliases extractDrugAutocorrelationCharge
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugAutocorrelationCharge
 #'
@@ -33,9 +33,10 @@
 
 extractDrugAutocorrelationCharge = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorCharge',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.AutocorrelationDescriptorCharge',
+        verbose = !silent)
 
     return(x)
 

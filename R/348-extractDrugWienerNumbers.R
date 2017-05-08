@@ -20,7 +20,7 @@
 #'
 #' @aliases extractDrugWienerNumbers
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugWienerNumbers
 #'
@@ -40,9 +40,10 @@
 
 extractDrugWienerNumbers = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.WienerNumbersDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.WienerNumbersDescriptor',
+        verbose = !silent)
 
     return(x)
 

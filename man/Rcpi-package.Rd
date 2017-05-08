@@ -8,7 +8,7 @@
 \description{
 Rcpi offers a molecular informatics toolkit with a
 comprehensive integration of bioinformatics and
-chemoinformatics tools for drug discovery.
+cheminformatics tools for drug discovery.
 }
 \details{
 The package vignette can be opened with \code{vignette('Rcpi')}.
@@ -20,5 +20,4 @@ License: \tab Artistic-2.0\cr }
 Bug reports and feature requests should be sent to
 \url{https://github.com/road2stat/Rcpi/issues}.
 }
-\keyword{Rcpi}
 

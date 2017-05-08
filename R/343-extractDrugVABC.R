@@ -16,7 +16,7 @@
 #'
 #' @aliases extractDrugVABC
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugVABC
 #'
@@ -31,9 +31,10 @@
 
 extractDrugVABC = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.VABCDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.VABCDescriptor',
+        verbose = !silent)
 
     return(x)
 
