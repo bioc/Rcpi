@@ -57,7 +57,7 @@
 #'
 #' @aliases extractDrugCPSA
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugCPSA
 #'
@@ -79,9 +79,10 @@
 
 extractDrugCPSA = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.CPSADescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.CPSADescriptor',
+        verbose = !silent)
 
     return(x)
 

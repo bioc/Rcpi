@@ -20,7 +20,7 @@
 #'
 #' @aliases extractDrugMannholdLogP
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugMannholdLogP
 #'
@@ -41,9 +41,10 @@
 
 extractDrugMannholdLogP = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.MannholdLogPDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.MannholdLogPDescriptor',
+        verbose = !silent)
 
     return(x)
 

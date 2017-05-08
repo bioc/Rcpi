@@ -1,4 +1,5 @@
-.calcSeqPairSim = function (twoid, protlist = protlist, type = type, submat = submat) {
+.calcSeqPairSim = function(
+    twoid, protlist = protlist, type = type, submat = submat) {
 
     id1 = twoid[1]
     id2 = twoid[2]
@@ -59,7 +60,7 @@
 #'
 #' @aliases calcParProtSeqSim
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{calcTwoProtSeqSim} for protein sequence alignment
 #' for two protein sequences. See \code{\link{calcParProtGOSim}} for
@@ -80,8 +81,8 @@
 #'                             submat = 'BLOSUM62')
 #' print(psimmat)}
 
-calcParProtSeqSim = function (protlist, cores = 2,
-                              type = 'local', submat = 'BLOSUM62') {
+calcParProtSeqSim = function(
+    protlist, cores = 2, type = 'local', submat = 'BLOSUM62') {
 
     doParallel::registerDoParallel(cores)
 
@@ -131,7 +132,7 @@ calcParProtSeqSim = function (protlist, cores = 2,
 #'
 #' @aliases calcTwoProtSeqSim
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @seealso See \code{\link{calcParProtSeqSim}} for paralleled pairwise
 #' protein similarity calculation based on sequence alignment.
@@ -148,15 +149,15 @@ calcParProtSeqSim = function (protlist, cores = 2,
 #' seqalign
 #' slot(seqalign, "score")}
 
-calcTwoProtSeqSim = function (seq1, seq2, type = 'local',
-                              submat = 'BLOSUM62') {
+calcTwoProtSeqSim = function(
+    seq1, seq2, type = 'local', submat = 'BLOSUM62') {
 
     # sequence alignment for two protein sequences
     s1  = try(Biostrings::AAString(seq1), silent = TRUE)
     s2  = try(Biostrings::AAString(seq2), silent = TRUE)
-    s12 = try(Biostrings::pairwiseAlignment(s1, s2, type = type,
-                                            substitutionMatrix = submat),
-              silent = TRUE)
+    s12 = try(Biostrings::pairwiseAlignment(
+        s1, s2, type = type, substitutionMatrix = submat),
+        silent = TRUE)
 
     return(s12)
 

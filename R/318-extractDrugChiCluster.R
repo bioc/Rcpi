@@ -36,7 +36,7 @@
 #'
 #' @aliases extractDrugChiCluster
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugChiCluster
 #'
@@ -51,9 +51,10 @@
 
 extractDrugChiCluster = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.ChiClusterDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.ChiClusterDescriptor',
+        verbose = !silent)
 
     return(x)
 

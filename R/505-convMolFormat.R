@@ -21,7 +21,7 @@
 #'
 #' @aliases convMolFormat
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export convMolFormat
 #'
@@ -199,9 +199,10 @@
 
 convMolFormat = function (infile, outfile, from, to) {
 
-  ChemmineOB::convertFormatFile(from = from, to = to,
-                                fromFile = infile, toFile = outfile)
+    ChemmineOB::convertFormatFile(
+        from = from, to = to,
+        fromFile = infile, toFile = outfile)
 
-  invisible()
+    invisible()
 
 }

@@ -39,7 +39,7 @@
 #'
 #' @aliases extractDrugMomentOfInertia
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugMomentOfInertia
 #'
@@ -54,9 +54,10 @@
 
 extractDrugMomentOfInertia = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.MomentOfInertiaDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.MomentOfInertiaDescriptor',
+        verbose = !silent)
 
     return(x)
 

@@ -16,7 +16,7 @@
 #'
 #' @aliases extractDrugLongestAliphaticChain
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugLongestAliphaticChain
 #'
@@ -31,9 +31,10 @@
 
 extractDrugLongestAliphaticChain = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.LongestAliphaticChainDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.LongestAliphaticChainDescriptor',
+        verbose = !silent)
 
     return(x)
 

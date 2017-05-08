@@ -25,7 +25,7 @@
 #'
 #' @aliases extractDrugPetitjeanNumber
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugPetitjeanNumber
 #'
@@ -40,9 +40,10 @@
 
 extractDrugPetitjeanNumber = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.PetitjeanNumberDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.PetitjeanNumberDescriptor',
+        verbose = !silent)
 
     return(x)
 

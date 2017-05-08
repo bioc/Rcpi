@@ -109,7 +109,7 @@
 #'
 #' @aliases extractDrugKierHallSmarts
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugKierHallSmarts
 #'
@@ -137,9 +137,10 @@
 
 extractDrugKierHallSmarts = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.KierHallSmartsDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.KierHallSmartsDescriptor',
+        verbose = !silent)
 
     return(x)
 

@@ -24,7 +24,7 @@
 #'
 #' @aliases extractDrugLengthOverBreadth
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugLengthOverBreadth
 #'
@@ -41,9 +41,10 @@
 
 extractDrugLengthOverBreadth = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.LengthOverBreadthDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.LengthOverBreadthDescriptor',
+        verbose = !silent)
 
     return(x)
 

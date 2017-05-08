@@ -30,7 +30,7 @@
 #'
 #' @aliases calcDrugFPSim
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export calcDrugFPSim
 #'
@@ -58,9 +58,9 @@
 #' calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'dice')
 #' calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'hamming')}
 
-calcDrugFPSim = function (fp1, fp2, fptype = c('compact', 'complete'),
-                          metric = c('tanimoto', 'euclidean', 'cosine',
-                                     'dice', 'hamming')) {
+calcDrugFPSim = function(
+    fp1, fp2, fptype = c('compact', 'complete'),
+    metric = c('tanimoto', 'euclidean', 'cosine', 'dice', 'hamming')) {
 
     fptype = match.arg(fptype)
     metric = match.arg(metric)

@@ -24,7 +24,7 @@
 #'
 #' @aliases extractDrugHybridizationRatio
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugHybridizationRatio
 #'
@@ -39,9 +39,10 @@
 
 extractDrugHybridizationRatio = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.HybridizationRatioDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.HybridizationRatioDescriptor',
+        verbose = !silent)
 
     return(x)
 

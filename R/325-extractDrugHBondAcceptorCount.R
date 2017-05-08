@@ -28,7 +28,7 @@
 #'
 #' @aliases extractDrugHBondAcceptorCount
 #'
-#' @author Nan Xiao <\url{http://nanx.me}>
+#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export extractDrugHBondAcceptorCount
 #'
@@ -43,9 +43,10 @@
 
 extractDrugHBondAcceptorCount = function (molecules, silent = TRUE) {
 
-    x = eval.desc(molecules,
-                  'org.openscience.cdk.qsar.descriptors.molecular.HBondAcceptorCountDescriptor',
-                  verbose = !silent)
+    x = eval.desc(
+        molecules,
+        'org.openscience.cdk.qsar.descriptors.molecular.HBondAcceptorCountDescriptor',
+        verbose = !silent)
 
     return(x)
 
