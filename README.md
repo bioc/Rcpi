@@ -1,6 +1,7 @@
 # Rcpi  <a href="https://nanx.me/Rcpi/"><img src="https://i.imgur.com/v8lHCn9.png" align="right" alt="logo" height="180" width="180" /></a>
 
-[![platform](https://www.bioconductor.org/shields/availability/devel/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#archives)
+[![Build Status](https://travis-ci.org/road2stat/Rcpi.svg?branch=master)](https://travis-ci.org/road2stat/Rcpi)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/road2stat/rcpi?branch=master&svg=true)](https://ci.appveyor.com/project/road2stat/rcpi)
 [![bioc](https://www.bioconductor.org/shields/years-in-bioc/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#since)
 [![downloads](https://www.bioconductor.org/shields/downloads/Rcpi.svg)](https://bioconductor.org/packages/stats/bioc/Rcpi/)
 
@@ -50,6 +51,8 @@ biocLite("Rcpi", dependencies = c("Imports", "Enhances"))
 ```
 
 Several dependencies of the Rcpi package may require some system-level libraries, check the corresponding manuals of these packages for detailed installation guides.
+
+Browse the package vignettes: [[1](https://nanx.me/Rcpi/articles/Rcpi.html)], [[2](https://nanx.me/Rcpi/articles/Rcpi-quickref.html)] for a quick-start.
 
 ## Features
 
