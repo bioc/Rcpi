@@ -10,8 +10,8 @@ init:
 install:
   ps: Bootstrap
 
-cache:
-  - C:\RLibrary
+# cache:
+#   - C:\RLibrary
 
 # Adapt as necessary starting from here
 
@@ -21,6 +21,7 @@ environment:
 
   matrix:
   - R_VERSION: release
+    BIOC_USE_DEVEL: FALSE
     R_ARCH: x64
 
 build_script:
