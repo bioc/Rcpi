@@ -39,15 +39,14 @@ BibTeX entry:
 To install the `Rcpi` package:
 
 ```r
-source("https://bioconductor.org/biocLite.R")
-biocLite("Rcpi")
+install.packages("BiocManager")
+BiocManager::install("Rcpi")
 ```
 
 To make the package fully functional (especially the Open Babel related functions), we recommend installing the _Enhances_ packages by:
 
 ```r
-source("https://bioconductor.org/biocLite.R")
-biocLite("Rcpi", dependencies = c("Imports", "Enhances"))
+BiocManager::install("Rcpi", dependencies = c("Imports", "Enhances"))
 ```
 
 Several dependencies of the Rcpi package may require some system-level libraries, check the corresponding manuals of these packages for detailed installation guides.
@@ -90,4 +89,4 @@ The computed protein sequence descriptors, molecular descriptors/fingerprints, i
 
 ## Contribute
 
-To contribute to this project, please take a look at the [Contributing Guidelines](https://github.com/road2stat/Rcpi/blob/master/CONTRIBUTING.md) first. Please note that this project is released with a [Contributor Code of Conduct](https://github.com/road2stat/Rcpi/blob/master/CONDUCT.md). By participating in this project you agree to abide by its terms.
+To contribute to this project, please take a look at the [Contributing Guidelines](CONTRIBUTING.md) first. Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
