@@ -1,3 +1,11 @@
+# Rcpi 1.21.1 (2019-05-17)
+
+## Improvements
+
+- Removed AppVeyor CI due to the frequent Bioconductor installation and dependency issues which are not related to the package itself.
+- Updated GitHub repository links due to the recent handle change.
+- Updated the vignette style.
+
 # Rcpi 1.19.2 (2019-02-24)
 
 ## Bug Fixes
@@ -8,8 +16,8 @@
 
 ## Bug Fixes
 
-- Fixed API endpoints that are not working due to their changes across time ([#5](https://github.com/road2stat/Rcpi/issues/5)).
-- Fixed the vignette example for QSRR study ([#6](https://github.com/road2stat/Rcpi/issues/6)).
+- Fixed API endpoints that are not working due to their changes across time ([#5](https://github.com/nanxstats/Rcpi/issues/5)).
+- Fixed the vignette example for QSRR study ([#6](https://github.com/nanxstats/Rcpi/issues/6)).
 
 ## Improvements
 
