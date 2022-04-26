@@ -1,10 +1,9 @@
-# Rcpi  <a href="https://nanx.me/Rcpi/"><img src="https://i.imgur.com/KriPYZ7.png" align="right" alt="logo" height="180" width="180" /></a>
+# Rcpi <img src="man/figures/logo.png" align="right" width="120" />
 
-[![Build Status](https://travis-ci.org/nanxstats/Rcpi.svg?branch=master)](https://travis-ci.org/nanxstats/Rcpi)
+<!-- badges: start -->
 [![bioc](https://www.bioconductor.org/shields/years-in-bioc/Rcpi.svg)](https://bioconductor.org/packages/release/bioc/html/Rcpi.html#since)
 [![downloads](https://www.bioconductor.org/shields/downloads/Rcpi.svg)](https://bioconductor.org/packages/stats/bioc/Rcpi/)
-
-[BioC (Release)](https://www.bioconductor.org/packages/release/bioc/html/Rcpi.html) · [BioC (Development)](https://www.bioconductor.org/packages/devel/bioc/html/Rcpi.html) · [GitHub (Latest)](https://github.com/nanxstats/Rcpi)
+<!-- badges: end -->
 
 ## Overview
 
@@ -20,16 +19,14 @@ BibTeX entry:
 
 ```
 @article{Rcpi2015,
-  author = {Cao, Dong-Sheng and Xiao, Nan and Xu, Qing-Song and Alex F. Chen.},
-  title = {{Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions}},
+  author  = {Cao, Dong-Sheng and Xiao, Nan and Xu, Qing-Song and Chen, Alex F.},
+  title   = {{Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions}},
   journal = {Bioinformatics},
-  year = {2015},
-  volume = {31},
-  number = {2},
-  pages = {279--281},
-  doi = {10.1093/bioinformatics/btu624},
-  issn = {1367-4803},
-  url = {http://bioinformatics.oxfordjournals.org/content/31/2/279}
+  year    = {2015},
+  volume  = {31},
+  number  = {2},
+  pages   = {279--281},
+  doi     = {10.1093/bioinformatics/btu624}
 }
 ```
 

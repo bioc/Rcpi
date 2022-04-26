@@ -4,8 +4,12 @@
 \alias{extractDrugShortestPathComplete}
 \title{Calculate the Shortest Path Molecular Fingerprints (in Complete Format)}
 \usage{
-extractDrugShortestPathComplete(molecules, depth = 6, size = 1024,
-  silent = TRUE)
+extractDrugShortestPathComplete(
+  molecules,
+  depth = 6,
+  size = 1024,
+  silent = TRUE
+)
 }
 \arguments{
 \item{molecules}{Parsed molucule object.}
@@ -38,7 +42,3 @@ dim(fp)}
 \seealso{
 \link{extractDrugShortestPath}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{extractDrugShortestPathComplete}

@@ -4,8 +4,12 @@
 \alias{getProt}
 \title{Retrieve Protein Sequence in various Formats from Databases}
 \usage{
-getProt(id, from = c("uniprot", "kegg", "pdb"), type = c("fasta",
-  "pdb", "aaseq"), parallel = 5)
+getProt(
+  id,
+  from = c("uniprot", "kegg", "pdb"),
+  type = c("fasta", "pdb", "aaseq"),
+  parallel = 5
+)
 }
 \arguments{
 \item{id}{A character vector, as the protein ID(s).}
@@ -41,7 +45,3 @@ getProt(id, from = 'uniprot', type = 'aaseq')}
 See \code{\link{getDrug}} for retrieving drug molecules
 from five databases.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{getProt}

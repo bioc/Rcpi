@@ -4,8 +4,12 @@
 \alias{segProt}
 \title{Protein Sequence Segmentation}
 \usage{
-segProt(x, aa = c("A", "R", "N", "D", "C", "E", "Q", "G", "H", "I", "L",
-  "K", "M", "F", "P", "S", "T", "W", "Y", "V"), k = 7)
+segProt(
+  x,
+  aa = c("A", "R", "N", "D", "C", "E", "Q", "G", "H", "I", "L", "K", "M", "F", "P",
+    "S", "T", "W", "Y", "V"),
+  k = 7
+)
 }
 \arguments{
 \item{x}{A character vector, as the input protein sequence.}
@@ -36,13 +40,3 @@ x = readFASTA(system.file('protseq/P00750.fasta', package = 'Rcpi'))[[1]]
 segProt(x, aa = 'R', k = 5)
 
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{acid}
-\keyword{amino}
-\keyword{protein}
-\keyword{seg}
-\keyword{segment}
-\keyword{segmentation}
-\keyword{sequence}

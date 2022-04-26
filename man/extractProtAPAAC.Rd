@@ -4,8 +4,13 @@
 \alias{extractProtAPAAC}
 \title{Amphiphilic Pseudo Amino Acid Composition Descriptor}
 \usage{
-extractProtAPAAC(x, props = c("Hydrophobicity", "Hydrophilicity"),
-  lambda = 30, w = 0.05, customprops = NULL)
+extractProtAPAAC(
+  x,
+  props = c("Hydrophobicity", "Hydrophilicity"),
+  lambda = 30,
+  w = 0.05,
+  customprops = NULL
+)
 }
 \arguments{
 \item{x}{A character vector, as the input protein sequence.}
@@ -103,12 +108,3 @@ PNAS, 1981, 78:3824-3828 (T.P.Hopp & K.R.Woods). (The hydrophilicity data)
 See \code{\link{extractProtPAAC}} for pseudo
          amino acid composition descriptor.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{APAAC}
-\keyword{Amphiphilic}
-\keyword{Composition}
-\keyword{Pseudo}
-\keyword{extract}
-\keyword{extractProtAPAAC}

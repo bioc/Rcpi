@@ -4,9 +4,13 @@
 \alias{extractProtMoreauBroto}
 \title{Normalized Moreau-Broto Autocorrelation Descriptor}
 \usage{
-extractProtMoreauBroto(x, props = c("CIDH920105", "BHAR880101",
-  "CHAM820101", "CHAM820102", "CHOC760101", "BIGC670101", "CHAM810101",
-  "DAYM780201"), nlag = 30L, customprops = NULL)
+extractProtMoreauBroto(
+  x,
+  props = c("CIDH920105", "BHAR880101", "CHAM820101", "CHAM820102", "CHOC760101",
+    "BIGC670101", "CHAM810101", "DAYM780201"),
+  nlag = 30L,
+  customprops = NULL
+)
 }
 \arguments{
 \item{x}{A character vector, as the input protein sequence.}
@@ -99,14 +103,3 @@ See \code{\link{extractProtMoran}} and \code{\link{extractProtGeary}}
          for Moran autocorrelation descriptors and
          Geary autocorrelation descriptors.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Broto}
-\keyword{Moreau}
-\keyword{Moreau-Broto}
-\keyword{MoreauBroto}
-\keyword{autocorrelation}
-\keyword{extract}
-\keyword{extractProtMoreauBroto}
-\keyword{normalized}

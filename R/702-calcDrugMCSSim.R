@@ -27,12 +27,6 @@
 #'         The numeric similarity value includes Tanimoto coefficient
 #'         and overlap coefficient.
 #'
-#' @keywords calcDrugMCSSim Drug Similarity MCS Maximum Common Substructure
-#'
-#' @aliases calcDrugMCSSim
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export calcDrugMCSSim
 #'
 #' @references
@@ -45,28 +39,37 @@
 #' mol2 = 'O=C(NCc1cc(OC)c(O)cc1)CCCC/C=C/C(C)C'
 #' mol3 = readChar(system.file('compseq/DB00859.sdf', package = 'Rcpi'), nchars = 1e+6)
 #' mol4 = readChar(system.file('compseq/DB00860.sdf', package = 'Rcpi'), nchars = 1e+6)
-#' \donttest{
+#' \dontrun{
 #' sim1 = calcDrugMCSSim(mol1, mol2, type = 'smile')
 #' sim2 = calcDrugMCSSim(mol3, mol4, type = 'sdf', plot = TRUE)
 #' print(sim1[[2]])  # Tanimoto Coefficient
-#' print(sim2[[3]])  # Overlap Coefficient}
+#' print(sim2[[3]])  # Overlap Coefficient
+#' }
 
 calcDrugMCSSim = function(
     mol1, mol2, type = c('smile', 'sdf'), plot = FALSE,
     al = 0, au = 0, bl = 0, bu = 0,
     matching.mode = 'static', ...) {
 
+    if (!is_pkg_available("ChemmineR")) {
+        stop ("Must install the `ChemmineR` package to calculate the similarity.", call. = FALSE)
+    }
+
+    if (!is_pkg_available("fmcsR")) {
+        stop ("Must install the `fmcsR` package to calculate the similarity.", call. = FALSE)
+    }
+
     if (type == 'smile') {
 
         # smile to sdfset
-        sdfset1 = ChemmineR::smiles2sdf(mol1)
-        sdfset2 = ChemmineR::smiles2sdf(mol2)
+        sdfset1 = eval(parse(text = "ChemmineR::smiles2sdf(mol1)"))
+        sdfset2 = eval(parse(text = "ChemmineR::smiles2sdf(mol2)"))
 
     } else if (type == 'sdf') {
 
         # sdf to sdfset
-        sdfstr1 = ChemmineR::read.SDFstr(textConnection(mol1))
-        sdfstr2 = ChemmineR::read.SDFstr(textConnection(mol2))
+        sdfstr1 = eval(parse(text = "ChemmineR::read.SDFstr(textConnection(mol1))"))
+        sdfstr2 = eval(parse(text = "ChemmineR::read.SDFstr(textConnection(mol2))"))
         sdfset1 = as(sdfstr1, 'SDFset')
         sdfset2 = as(sdfstr2, 'SDFset')
 
@@ -76,10 +79,9 @@ calcDrugMCSSim = function(
 
     }
 
-    mcs = fmcsR::fmcs(sdfset1, sdfset2, al = al, au = au, bl = bl, bu = bu,
-                      matching.mode = matching.mode, fast = FALSE)
+    mcs = eval(parse(text = "fmcsR::fmcs(sdfset1, sdfset2, al = al, au = au, bl = bl, bu = bu, matching.mode = matching.mode, fast = FALSE)"))
 
-    if (plot == TRUE) fmcsR::plotMCS(mcs, ...)
+    if (plot == TRUE) eval(parse(text = "fmcsR::plotMCS(mcs, ...)"))
 
     x = list(mcs,
              mcs@stats['Tanimoto_Coefficient'],

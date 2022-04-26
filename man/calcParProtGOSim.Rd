@@ -4,8 +4,14 @@
 \alias{calcParProtGOSim}
 \title{Protein Sequence Similarity Calculation based on Gene Ontology (GO) Similarity}
 \usage{
-calcParProtGOSim(golist, type = c("go", "gene"), ont = c("MF", "BP",
-  "CC"), organism = "human", measure = "Resnik", combine = "BMA")
+calcParProtGOSim(
+  golist,
+  type = c("go", "gene"),
+  ont = c("MF", "BP", "CC"),
+  organism = "human",
+  measure = "Resnik",
+  combine = "BMA"
+)
 }
 \arguments{
 \item{golist}{A character vector, each component contains
@@ -60,9 +66,3 @@ GO semantic similarity between two groups of GO terms or two Entrez gene IDs.
 See \code{\link{calcParProtSeqSim}} for paralleled protein similarity
 calculation based on sequence alignment.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{GO}
-\keyword{calcParProtGOSim}
-\keyword{similarity}

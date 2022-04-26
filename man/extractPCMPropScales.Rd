@@ -4,8 +4,7 @@
 \alias{extractPCMPropScales}
 \title{Generalized AA-Properties Based Scales Descriptors}
 \usage{
-extractPCMPropScales(x, index = NULL, pc, lag, scale = TRUE,
-  silent = TRUE)
+extractPCMPropScales(x, index = NULL, pc, lag, scale = TRUE, silent = TRUE)
 }
 \arguments{
 \item{x}{A character vector, as the input protein sequence.}
@@ -53,11 +52,3 @@ propscales = extractPCMPropScales(x, index = c(160:165, 258:296), pc = 5, lag = 
 See \code{\link{extractPCMScales}} for
 generalized scales-based descriptors.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{AAindex}
-\keyword{descriptor}
-\keyword{extract}
-\keyword{extractPCMPropScales}
-\keyword{scales}

@@ -4,8 +4,7 @@
 \alias{getPPI}
 \title{Generating Protein-Protein Interaction Descriptors}
 \usage{
-getPPI(protmat1, protmat2, type = c("combine", "tensorprod",
-  "entrywise"))
+getPPI(protmat1, protmat2, type = c("combine", "tensorprod", "entrywise"))
 }
 \arguments{
 \item{protmat1}{The first protein descriptor matrix,
@@ -53,10 +52,3 @@ getPPI(x, y, type = c('combine', 'entrywise', 'tensorprod'))
 See \code{\link{getCPI}} for generating
 compound-protein interaction descriptors.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{getPPI}
-\keyword{interaction}
-\keyword{ppi}
-\keyword{protein-protein}

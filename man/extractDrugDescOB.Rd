@@ -53,16 +53,9 @@ mol3 = readChar(system.file('compseq/DB00860.sdf', package = 'Rcpi'),
 mol4 = readChar(system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'),
                 nchars = 1e+6)  # multiple molecules in a sdf file
 
-\donttest{
-# Problem (core dump) under Ubuntu 16.04
+\dontrun{
 smidesc0 = extractDrugDescOB(mol1, type = 'smile')
 smidesc1 = extractDrugDescOB(mol2, type = 'smile')
 sdfdesc0 = extractDrugDescOB(mol3, type = 'sdf')
 sdfdesc1 = extractDrugDescOB(mol4, type = 'sdf')}
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Descriptors}
-\keyword{OpenBabel}
-\keyword{extractDrugDescOB}

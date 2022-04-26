@@ -32,12 +32,6 @@
 #'         \item \code{TPSA} - Topological Polar Surface Area
 #'         }
 #'
-#' @keywords extractDrugDescOB OpenBabel Descriptors
-#'
-#' @aliases extractDrugDescOB
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export extractDrugDescOB
 #'
 #' @examples
@@ -50,8 +44,7 @@
 #' mol4 = readChar(system.file('sysdata/OptAA3d.sdf', package = 'Rcpi'),
 #'                 nchars = 1e+6)  # multiple molecules in a sdf file
 #'
-#' \donttest{
-#' # Problem (core dump) under Ubuntu 16.04
+#' \dontrun{
 #' smidesc0 = extractDrugDescOB(mol1, type = 'smile')
 #' smidesc1 = extractDrugDescOB(mol2, type = 'smile')
 #' sdfdesc0 = extractDrugDescOB(mol3, type = 'sdf')

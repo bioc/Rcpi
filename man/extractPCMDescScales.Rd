@@ -4,8 +4,15 @@
 \alias{extractPCMDescScales}
 \title{Scales-Based Descriptors with 20+ classes of Molecular Descriptors}
 \usage{
-extractPCMDescScales(x, propmat, index = NULL, pc, lag, scale = TRUE,
-  silent = TRUE)
+extractPCMDescScales(
+  x,
+  propmat,
+  index = NULL,
+  pc,
+  lag,
+  scale = TRUE,
+  silent = TRUE
+)
 }
 \arguments{
 \item{x}{A character vector, as the input protein sequence.}
@@ -67,10 +74,3 @@ descscales = extractPCMDescScales(x, propmat = 'AATopo', index = c(37:41, 43:47)
 See \code{\link{extractPCMScales}} for generalized
 AA-descriptor based scales descriptors.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{PCM}
-\keyword{extract}
-\keyword{extractPCMDescScales}
-\keyword{scales}

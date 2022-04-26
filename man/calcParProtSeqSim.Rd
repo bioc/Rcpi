@@ -4,8 +4,7 @@
 \alias{calcParProtSeqSim}
 \title{Parallellized Protein Sequence Similarity Calculation based on Sequence Alignment}
 \usage{
-calcParProtSeqSim(protlist, cores = 2, type = "local",
-  submat = "BLOSUM62")
+calcParProtSeqSim(protlist, cores = 2, type = "local", submat = "BLOSUM62")
 }
 \arguments{
 \item{protlist}{A length \code{n} list containing \code{n} protein sequences,
@@ -55,15 +54,3 @@ for two protein sequences. See \code{\link{calcParProtGOSim}} for
 protein similarity calculation based on
 Gene Ontology (GO) semantic similarity.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Needleman-Wunsch}
-\keyword{Smith-Waterman}
-\keyword{alignment}
-\keyword{calcParProtSeqSim}
-\keyword{global}
-\keyword{local}
-\keyword{parallel}
-\keyword{sequence}
-\keyword{similarity}

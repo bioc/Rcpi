@@ -4,8 +4,12 @@
 \alias{calcDrugFPSim}
 \title{Calculate Drug Molecule Similarity Derived by Molecular Fingerprints}
 \usage{
-calcDrugFPSim(fp1, fp2, fptype = c("compact", "complete"),
-  metric = c("tanimoto", "euclidean", "cosine", "dice", "hamming"))
+calcDrugFPSim(
+  fp1,
+  fp2,
+  fptype = c("compact", "complete"),
+  metric = c("tanimoto", "euclidean", "cosine", "dice", "hamming")
+)
 }
 \arguments{
 \item{fp1}{The first molecule's fingerprints,
@@ -64,14 +68,3 @@ calcDrugFPSim(fp3, fp4, fptype = 'complete', metric = 'hamming')}
 Gasteiger, Johann, and Thomas Engel, eds.
 Chemoinformatics. Wiley.com, 2006.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{Cosine}
-\keyword{Dice}
-\keyword{Drug}
-\keyword{Euclidean}
-\keyword{Hamming}
-\keyword{Similarity}
-\keyword{Tanimoto}
-\keyword{calcDrugFPSim}

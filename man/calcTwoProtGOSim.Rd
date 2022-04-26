@@ -4,8 +4,15 @@
 \alias{calcTwoProtGOSim}
 \title{Protein Similarity Calculation based on Gene Ontology (GO) Similarity}
 \usage{
-calcTwoProtGOSim(id1, id2, type = c("go", "gene"), ont = c("MF", "BP",
-  "CC"), organism = "human", measure = "Resnik", combine = "BMA")
+calcTwoProtGOSim(
+  id1,
+  id2,
+  type = c("go", "gene"),
+  ont = c("MF", "BP", "CC"),
+  organism = "human",
+  measure = "Resnik",
+  combine = "BMA"
+)
 }
 \arguments{
 \item{id1}{A character vector. length > 1: each element is a GO term;
@@ -63,9 +70,3 @@ Gene Ontology (GO) semantic similarity.
 See \code{\link{calcParProtSeqSim}} for paralleled protein similarity
 calculation based on sequence alignment.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{GO}
-\keyword{calcTwoProtGOSim}
-\keyword{similarity}

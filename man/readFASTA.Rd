@@ -4,8 +4,11 @@
 \alias{readFASTA}
 \title{Read Protein Sequences in FASTA Format}
 \usage{
-readFASTA(file = system.file("protseq/P00750.fasta", package = "Rcpi"),
-  legacy.mode = TRUE, seqonly = FALSE)
+readFASTA(
+  file = system.file("protseq/P00750.fasta", package = "Rcpi"),
+  legacy.mode = TRUE,
+  seqonly = FALSE
+)
 }
 \arguments{
 \item{file}{The name of the file which the sequences in fasta format are
@@ -51,9 +54,3 @@ of the United States of America}, \bold{85}: 2444-2448
 See \code{\link{readPDB}} for reading protein sequences
 in PDB format.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{FASTA}
-\keyword{Rcpi}
-\keyword{readFASTA}

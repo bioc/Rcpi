@@ -4,8 +4,12 @@
 \alias{getDrug}
 \title{Retrieve Drug Molecules in MOL and SMILES Format from Databases}
 \usage{
-getDrug(id, from = c("pubchem", "chembl", "cas", "kegg", "drugbank"),
-  type = c("mol", "smile"), parallel = 5)
+getDrug(
+  id,
+  from = c("pubchem", "chembl", "cas", "kegg", "drugbank"),
+  type = c("mol", "smile"),
+  parallel = 5
+)
 }
 \arguments{
 \item{id}{A character vector, as the drug ID(s).}
@@ -40,7 +44,3 @@ getDrug(id, 'drugbank', 'smile')}
 See \code{\link{getProt}} for retrieving protein sequences
 from three databases.
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}
-\keyword{getDrug}
