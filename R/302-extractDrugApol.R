@@ -4,8 +4,7 @@
 #'
 #' Calculates the sum of the atomic polarizabilities
 #' (including implicit hydrogens) descriptor.
-#' Polarizabilities are taken from
-#' \url{http://www.sunysccc.edu/academic/mst/ptable/p-table2.htm}.
+#' Polarizabilities are taken from \url{https://bit.ly/3PvNbhe}.
 #'
 #' @param molecules Parsed molucule object.
 #' @param silent Logical. Whether the calculating process
@@ -17,8 +16,6 @@
 #'
 #' @export extractDrugApol
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -27,12 +24,5 @@
 #' head(dat)}
 
 extractDrugApol = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.APolDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'APolDescriptor', silent = silent)
 }

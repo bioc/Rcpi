@@ -4,7 +4,7 @@
 #'
 #' The number of rotatable bonds is given by the SMARTS specified by
 #' Daylight on SMARTS tutorial
-#' (\url{http://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html#EXMPL})
+#' (\url{https://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html})
 #'
 #' @param molecules Parsed molucule object.
 #' @param silent Logical. Whether the calculating process
@@ -16,8 +16,6 @@
 #'
 #' @export extractDrugRotatableBondsCount
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -26,12 +24,5 @@
 #' head(dat)}
 
 extractDrugRotatableBondsCount = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.RotatableBondsCountDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'RotatableBondsCountDescriptor', silent = silent)
 }
