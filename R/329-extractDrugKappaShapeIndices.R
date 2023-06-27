@@ -4,8 +4,7 @@
 #'
 #' Kier and Hall Kappa molecular shape indices compare the molecular graph
 #' with minimal and maximal molecular graphs;
-#' see \url{http://www.chemcomp.com/Journal_of_CCG/Features/descr.htm#KH}
-#' for details:
+#' see \url{https://bit.ly/3ramdBy} for details:
 #' "they are intended to capture different aspects of molecular shape.
 #' Note that hydrogens are ignored. In the following description,
 #' n denotes the number of atoms in the hydrogen suppressed graph,
@@ -29,8 +28,6 @@
 #'
 #' @export extractDrugKappaShapeIndices
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -39,12 +36,5 @@
 #' head(dat)}
 
 extractDrugKappaShapeIndices = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.KappaShapeIndicesDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'KappaShapeIndicesDescriptor', silent = silent)
 }

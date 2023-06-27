@@ -9,7 +9,7 @@
 #' This descriptor calculates the sum of the absolute value of the
 #' difference between atomic polarizabilities of all bonded atoms
 #' in the molecule (including implicit hydrogens) with polarizabilities
-#' taken from \url{http://www.sunysccc.edu/academic/mst/ptable/p-table2.htm}.
+#' taken from \url{https://bit.ly/3PvNbhe}.
 #' This descriptor assumes 2-centered bonds.
 #'
 #' @param molecules Parsed molucule object.
@@ -22,8 +22,6 @@
 #'
 #' @export extractDrugBPol
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -32,12 +30,5 @@
 #' head(dat)}
 
 extractDrugBPol = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.BPolDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'BPolDescriptor', silent = silent)
 }

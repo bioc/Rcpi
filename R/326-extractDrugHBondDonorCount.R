@@ -4,7 +4,7 @@
 #'
 #' This descriptor calculates the number of hydrogen bond donors using
 #' a slightly simplified version of the PHACIR atom types
-#' (\url{http://www.chemie.uni-erlangen.de/model2001/abstracts/rester.html}).
+#' (\url{https://bit.ly/3qXQELf}).
 #' The following groups are counted as hydrogen bond donors:
 #' \itemize{
 #' \item Any-OH where the formal charge of the oxygen is non-negative
@@ -23,8 +23,6 @@
 #'
 #' @export extractDrugHBondDonorCount
 #'
-#' @importFrom rcdk eval.desc
-#'
 #' @examples
 #' smi = system.file('vignettedata/FDAMDD.smi', package = 'Rcpi')
 #' \donttest{
@@ -33,12 +31,5 @@
 #' head(dat)}
 
 extractDrugHBondDonorCount = function (molecules, silent = TRUE) {
-
-    x = eval.desc(
-        molecules,
-        'org.openscience.cdk.qsar.descriptors.molecular.HBondDonorCountDescriptor',
-        verbose = !silent)
-
-    return(x)
-
+    evaluateDescriptor(molecules, type = 'HBondDonorCountDescriptor', silent = silent)
 }
