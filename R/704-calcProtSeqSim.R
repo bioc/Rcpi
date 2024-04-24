@@ -12,9 +12,9 @@
 
         s1  = try(Biostrings::AAString(protlist[[id1]]), silent = TRUE)
         s2  = try(Biostrings::AAString(protlist[[id2]]), silent = TRUE)
-        s12 = try(Biostrings::pairwiseAlignment(s1, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
-        s11 = try(Biostrings::pairwiseAlignment(s1, s1, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
-        s22 = try(Biostrings::pairwiseAlignment(s2, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
+        s12 = try(pwalign::pairwiseAlignment(s1, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
+        s11 = try(pwalign::pairwiseAlignment(s1, s1, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
+        s22 = try(pwalign::pairwiseAlignment(s2, s2, type = type, substitutionMatrix = submat, scoreOnly = TRUE), silent = TRUE)
 
         if ( is.numeric(s12) == FALSE | is.numeric(s11) == FALSE | is.numeric(s22) == FALSE ) {
             sim = 0L
@@ -141,7 +141,7 @@ calcTwoProtSeqSim = function(
     # sequence alignment for two protein sequences
     s1  = try(Biostrings::AAString(seq1), silent = TRUE)
     s2  = try(Biostrings::AAString(seq2), silent = TRUE)
-    s12 = try(Biostrings::pairwiseAlignment(
+    s12 = try(pwalign::pairwiseAlignment(
         s1, s2, type = type, substitutionMatrix = submat),
         silent = TRUE)
 

@@ -1,5 +1,5 @@
 Package: Rcpi
-Version: 1.39.0
+Version: 1.39.1
 Type: Package
 Title: Molecular Informatics Toolkit for Compound-Protein
     Interaction in Drug Discovery
@@ -26,6 +26,7 @@ Imports:
     doParallel,
     foreach,
     methods,
+    pwalign,
     rjson,
     rlang,
     stats,
@@ -36,5 +37,5 @@ Suggests:
     testthat (>= 3.0.0)
 biocViews: Software, DataImport, DataRepresentation, FeatureExtraction,
     Cheminformatics, BiomedicalInformatics, Proteomics, GO, SystemsBiology
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Config/testthat/edition: 3
