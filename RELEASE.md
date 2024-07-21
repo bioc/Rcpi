@@ -4,8 +4,8 @@
 
 ```bash
 git clone git@github.com:nanxstats/Rcpi.git
-git clone -b master git@git.bioconductor.org:packages/Rcpi.git Rcpi-devel
-git clone -b RELEASE_3_15 git@git.bioconductor.org:packages/Rcpi.git Rcpi-release
+git clone -b devel git@git.bioconductor.org:packages/Rcpi.git Rcpi-devel
+git clone -b RELEASE_3_19 git@git.bioconductor.org:packages/Rcpi.git Rcpi-release
 ```
 
 ## Merge changes
@@ -28,14 +28,14 @@ Modify branch name, write commit message, and push
 cd Rcpi-devel
 git status
 git add -A
-git commit -m "v1.33.1"
-git push origin master
+git commit -m "v1.41.1"
+git push origin devel
 ```
 
 ```bash
 cd Rcpi-release
 git status
 git add -A
-git commit -m "v1.33.1"
-git push origin RELEASE_3_15
+git commit -m "v1.41.1"
+git push origin RELEASE_3_19
 ```
