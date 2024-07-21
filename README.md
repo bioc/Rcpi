@@ -8,7 +8,7 @@
 
 ## Overview
 
-Rcpi offers a molecular informatics toolkit with a comprehensive integration of bioinformatics and cheminformatics tools for drug discovery. For more information, please see our paper <[DOI:10.1093/bioinformatics/btu624](https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btu624)> ([PDF](https://nanx.me/papers/Rcpi.pdf)).
+Rcpi offers a molecular informatics toolkit with a comprehensive integration of bioinformatics and cheminformatics tools for drug discovery. For more information, please see our paper <[DOI:10.1093/bioinformatics/btu624](https://doi.org/10.1093/bioinformatics/btu624)> ([PDF](https://nanx.me/papers/Rcpi.pdf)).
 
 ## Paper Citation
 
@@ -18,7 +18,7 @@ Dong-Sheng Cao, Nan Xiao, Qing-Song Xu, and Alex F. Chen. (2015). Rcpi: R/Biocon
 
 BibTeX entry:
 
-```
+```bibtex
 @article{Rcpi2015,
   author  = {Cao, Dong-Sheng and Xiao, Nan and Xu, Qing-Song and Chen, Alex F.},
   title   = {{Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds and their interactions}},
@@ -31,24 +31,58 @@ BibTeX entry:
 }
 ```
 
+Browse the [workflow](https://nanx.me/Rcpi/articles/Rcpi.html) and
+[cheatsheet](https://nanx.me/Rcpi/articles/Rcpi-quickref.html)
+vignettes to get started.
+
 ## Installation
 
-To install the `Rcpi` package:
+### Install Rcpi
+
+Install the Rcpi package via BiocManager. If BiocManager is not already installed:
 
 ```r
 install.packages("BiocManager")
+```
+
+Then install Rcpi:
+
+```r
 BiocManager::install("Rcpi")
 ```
 
-To make the package fully functional (especially the Open Babel related functions), we recommend installing the _Enhances_ packages by:
+### Manage dependencies
+
+Some features in the Rcpi package rely on certain R packages which may
+require specific system configurations to install from source.
+To make the build process robust, these dependencies have been configured
+as runtime dependencies. Here are some instructions for installing such
+dependencies to enable the features in Rcpi.
+
+#### Install rcdk
+
+rcdk can be installed from either CRAN or GitHub:
 
 ```r
-BiocManager::install("Rcpi", dependencies = c("Imports", "Enhances"))
+install.packages("rcdk", type = "source")
+remotes::install_github("CDK-R/cdkr", subdir = "rcdk")
 ```
 
-Several dependencies of the Rcpi package may require some system-level libraries, check the corresponding manuals of these packages for detailed installation guides.
+rcdk requires JDK and rJava to be installed and configured on your system.
+Check out the [rJava readme](https://github.com/s-u/rJava) for installation
+and troubleshooting instructions.
 
-Browse the package vignettes: [[1](https://nanx.me/Rcpi/articles/Rcpi.html)], [[2](https://nanx.me/Rcpi/articles/Rcpi-quickref.html)] for a quick-start.
+#### Install cheminformatics packages
+
+Additional packages for cheminformatics capabilities are available
+from Bioconductor:
+
+```r
+BiocManager::install(c("fmcsR", "ChemmineR", "ChemmineOB"))
+```
+
+ChemmineOB requires Open Babel to compile from source.
+Ensure Open Babel is properly installed on your system.
 
 ## Features
 
@@ -58,7 +92,7 @@ Rcpi implemented and integrated the state-of-the-art protein sequence descriptor
 
 - Calculate six types of generalized scales-based descriptors derived by various dimensionality reduction methods for proteochemometric (PCM) modeling.
 
-- Parallellized pairwise similarity computation derived by protein sequence alignment and Gene Ontology (GO) semantic similarity measures within a list of proteins.
+- Parallelized pairwise similarity computation derived by protein sequence alignment and Gene Ontology (GO) semantic similarity measures within a list of proteins.
 
 For small molecules, the Rcpi package could
 
@@ -82,8 +116,12 @@ Several useful auxiliary utilities are also shipped with Rcpi:
 
 - Molecular file format conversion
 
-The computed protein sequence descriptors, molecular descriptors/fingerprints, interaction descriptors and pairwise similarities are widely used in various research fields relevant to drug disvery, primarily bioinformatics, cheminformatics, proteochemometrics, and chemogenomics.
+The computed protein sequence descriptors, molecular descriptors/fingerprints, interaction descriptors and pairwise similarities are widely used in various research fields relevant to drug discovery, primarily bioinformatics, cheminformatics, proteochemometrics, and chemogenomics.
 
 ## Contribute
 
-To contribute to this project, please take a look at the [Contributing Guidelines](CONTRIBUTING.md) first. Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+To contribute to this project, please take a look at the
+[Contributing Guidelines](https://nanx.me/Rcpi/CONTRIBUTING.html) first.
+Please note that the Rcpi project is released with a
+[Contributor Code of Conduct](https://nanx.me/Rcpi/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
