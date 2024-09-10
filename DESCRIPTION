@@ -1,6 +1,6 @@
 Package: Rcpi
 Type: Package
-Version: 1.41.2
+Version: 1.41.3
 Title: Molecular Informatics Toolkit for Compound-Protein
     Interaction in Drug Discovery
 Authors@R: c(
@@ -26,8 +26,8 @@ Imports:
     doParallel,
     foreach,
     httr2,
+    jsonlite,
     methods,
-    rjson,
     rlang,
     stats,
     utils
